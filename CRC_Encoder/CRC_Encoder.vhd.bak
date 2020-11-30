@@ -1,0 +1,56 @@
+library Components;
+library IEEE;
+
+use Components.all;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Encoder is
+	port(	m	 : in std_logic_vector(15 downto 0);
+			crc : out std_logic_vector(23 downto 0)); 
+			
+end Encoder;			
+
+architecture Structural of Encoder is
+
+signal xor0_2, xor0_15, xor1_3, xor1_13, xor2_10, xor3_10, xor4_6, xor5_7, xor8_9, xor9_14, xor11_12 : std_logic;
+signal xor12, xor13, xor14, xor15, xor16 : std_logic;
+	
+	component xor2to1
+		port(	input0, input1 : in std_logic;
+				output	   	: out std_logic);
+	end component;
+	
+begin
+
+	crc(23 downto 8) <= m;
+
+	x1  : xor2to1 port map(m(0), m(1), xor0_2);				--0  xor 2
+	x2  : xor2to1 port map(m(0), m(15), xor0_15); 			--0  xor 15
+	x3  : xor2to1 port map(m(1), m(3), xor1_3); 				--1  xor 3
+	x4  : xor2to1 port map(m(1), m(13), xor1_13); 			--1  xor 13
+	x5  : xor2to1 port map(m(2), m(10), xor2_10); 			--2  xor 10
+	x6  : xor2to1 port map(m(3), m(10), xor3_10); 			--3  xor 10
+	x7  : xor2to1 port map(m(4), m(6), xor4_6);				--4  xor 6
+	x8  : xor2to1 port map(m(5), m(7), xor5_7);				--5  xor 7
+	x9  : xor2to1 port map(m(8), m(9), xor8_9);				--8  xor 9
+	x10 : xor2to1 port map(m(9), m(14), xor9_14);			--9  xor 14
+	x11 : xor2to1 port map(m(11), m(12), xor11_12);			--11 xor 12
+	---------------------------------------------------------------------------
+	x12 : xor2to1 port map(xor5_7, xor8_9, xor12);			--(5xor7)  xor (8xor9)
+	x13 : xor2to1 port map(xor0_15, xor1_3, xor13);			--(0xor15) xor (1xor3)
+	x14 : xor2to1 port map(xor4_6, xor5_7, xor14);			--(4xor6)  xor (5xor7)
+	x15 : xor2to1 port map(xor2_10, xor9_14, xor15);		--(2xor10) xor (9xor14)
+	x16 : xor2to1 port map(xor0_2, xor8_9, xor16);			--(0xor2)  xor (8xor9)
+	
+	
+end Structural;	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
