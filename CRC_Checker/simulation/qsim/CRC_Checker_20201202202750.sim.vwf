@@ -1,50 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Checker -c CRC_Checker --vector_source="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Checker.vwf" --testbench_file="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/Checker.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Checker -c CRC_Checker --vector_source="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Waveform.vwf" --testbench_file="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/" CRC_Checker -c CRC_Checker</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/" CRC_Checker -c CRC_Checker</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vcom -work work CRC_Checker.vho
-vcom -work work Checker.vwf.vht
-vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Checker_vhd_vec_tst
-vcd file -direction CRC_Checker.msim.vcd
-vcd add -internal CRC_Checker_vhd_vec_tst/*
-vcd add -internal CRC_Checker_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vcom -work work CRC_Checker.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax CRC_Checker_vhd_vec_tst/i1=CRC_Checker_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Checker_vhd_vec_tst
-vcd file -direction CRC_Checker.msim.vcd
-vcd add -internal CRC_Checker_vhd_vec_tst/*
-vcd add -internal CRC_Checker_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -345,7 +298,14 @@ TRANSITION_LIST("check_error")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 390.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -354,10 +314,14 @@ TRANSITION_LIST("fcs[23]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -366,7 +330,11 @@ TRANSITION_LIST("fcs[22]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -375,10 +343,14 @@ TRANSITION_LIST("fcs[21]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -387,10 +359,14 @@ TRANSITION_LIST("fcs[20]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -399,10 +375,14 @@ TRANSITION_LIST("fcs[19]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -411,10 +391,14 @@ TRANSITION_LIST("fcs[18]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -423,10 +407,14 @@ TRANSITION_LIST("fcs[17]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -435,7 +423,11 @@ TRANSITION_LIST("fcs[16]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -444,10 +436,14 @@ TRANSITION_LIST("fcs[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -456,10 +452,14 @@ TRANSITION_LIST("fcs[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -468,10 +468,14 @@ TRANSITION_LIST("fcs[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -480,10 +484,14 @@ TRANSITION_LIST("fcs[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -492,7 +500,11 @@ TRANSITION_LIST("fcs[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -501,10 +513,14 @@ TRANSITION_LIST("fcs[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -513,10 +529,14 @@ TRANSITION_LIST("fcs[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -525,10 +545,14 @@ TRANSITION_LIST("fcs[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -537,10 +561,14 @@ TRANSITION_LIST("fcs[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -549,10 +577,14 @@ TRANSITION_LIST("fcs[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -561,7 +593,11 @@ TRANSITION_LIST("fcs[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -570,10 +606,14 @@ TRANSITION_LIST("fcs[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -582,13 +622,17 @@ TRANSITION_LIST("fcs[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 110.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 
@@ -597,7 +641,11 @@ TRANSITION_LIST("fcs[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -606,9 +654,13 @@ TRANSITION_LIST("fcs[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 280.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 520.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 520.0;
+		}
 	}
 }
 
@@ -617,10 +669,14 @@ TRANSITION_LIST("fcs[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 280.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 390.0;
-		LEVEL 1 FOR 130.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 390.0;
+			LEVEL 1 FOR 130.0;
+		}
 	}
 }
 

@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Dec 02 19:21:05 2020
+    Info: Processing started: Wed Dec 02 20:27:47 2020
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Checker -c CRC_Checker --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Checker.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/Checker.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -53,14 +53,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Dec 02 19:21:06 2020
+    Info: Processing started: Wed Dec 02 20:27:48 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/ CRC_Checker -c CRC_Checker
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file CRC_Checker.vho in folder "C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Wed Dec 02 19:21:06 2020
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Wed Dec 02 20:27:49 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
@@ -83,7 +83,7 @@ Reading pref.tcl
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:21:07 on Dec 02,2020
+# Start time: 20:27:49 on Dec 02,2020
 # vcom -work work CRC_Checker.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -97,22 +97,22 @@ Reading pref.tcl
 # -- Compiling entity CRC_Checker
 # -- Compiling architecture structure of CRC_Checker
 
-# End time: 19:21:07 on Dec 02,2020, Elapsed time: 0:00:00
+# End time: 20:27:49 on Dec 02,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:21:07 on Dec 02,2020
+# Start time: 20:27:49 on Dec 02,2020
 # vcom -work work Checker.vwf.vht 
+
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRC_Checker_vhd_vec_tst
-
 # -- Compiling architecture CRC_Checker_arch of CRC_Checker_vhd_vec_tst
-# End time: 19:21:07 on Dec 02,2020, Elapsed time: 0:00:00
+# End time: 20:27:50 on Dec 02,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Checker_vhd_vec_tst 
-# Start time: 19:21:07 on Dec 02,2020
+# Start time: 20:27:50 on Dec 02,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -129,7 +129,7 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # after#33
 
-# End time: 19:21:08 on Dec 02,2020, Elapsed time: 0:00:01
+# End time: 20:27:50 on Dec 02,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -142,7 +142,7 @@ Reading C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qs
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/CRC_Checker_20201202192108.sim.vwf
+Writing the resulting VWF to C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/simulation/qsim/CRC_Checker_20201202202750.sim.vwf
 
 Finished VCD to VWF conversion.
 

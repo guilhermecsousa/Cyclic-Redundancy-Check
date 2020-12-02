@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd
 source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd
 source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd
+source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Checker.vwf
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
