@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "check_error",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[12]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[10]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[17]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[18]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[22]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[23]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[14]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[20]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[11]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[19]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[16]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[13]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[15]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[21]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fcs[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

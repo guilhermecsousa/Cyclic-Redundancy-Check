@@ -1,0 +1,461 @@
+|CRC_Checker
+fcs[0] => xor2to1:error0.input1
+fcs[1] => xor2to1:error1.input1
+fcs[2] => xor2to1:error2.input1
+fcs[3] => xor2to1:error3.input1
+fcs[4] => xor2to1:error4.input1
+fcs[5] => xor2to1:error5.input1
+fcs[6] => xor2to1:error6.input1
+fcs[7] => xor2to1:error7.input1
+fcs[8] => CRC_Encoder:encoder.m[0]
+fcs[9] => CRC_Encoder:encoder.m[1]
+fcs[10] => CRC_Encoder:encoder.m[2]
+fcs[11] => CRC_Encoder:encoder.m[3]
+fcs[12] => CRC_Encoder:encoder.m[4]
+fcs[13] => CRC_Encoder:encoder.m[5]
+fcs[14] => CRC_Encoder:encoder.m[6]
+fcs[15] => CRC_Encoder:encoder.m[7]
+fcs[16] => CRC_Encoder:encoder.m[8]
+fcs[17] => CRC_Encoder:encoder.m[9]
+fcs[18] => CRC_Encoder:encoder.m[10]
+fcs[19] => CRC_Encoder:encoder.m[11]
+fcs[20] => CRC_Encoder:encoder.m[12]
+fcs[21] => CRC_Encoder:encoder.m[13]
+fcs[22] => CRC_Encoder:encoder.m[14]
+fcs[23] => CRC_Encoder:encoder.m[15]
+check_error <= check_error.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder
+m[0] => xor2to1:g1.input0
+m[0] => xor2to1:g2.input0
+m[0] => fcs[8].DATAIN
+m[1] => xor2to1:g3.input0
+m[1] => xor2to1:g4.input0
+m[1] => fcs[9].DATAIN
+m[2] => xor2to1:g1.input1
+m[2] => xor2to1:g5.input0
+m[2] => fcs[10].DATAIN
+m[3] => xor2to1:g3.input1
+m[3] => xor2to1:g6.input0
+m[3] => fcs[11].DATAIN
+m[4] => xor2to1:g7.input0
+m[4] => xor2to1:c3b.input1
+m[4] => fcs[12].DATAIN
+m[5] => xor2to1:g8.input0
+m[5] => xor2to1:c4b.input1
+m[5] => fcs[13].DATAIN
+m[6] => xor2to1:g7.input1
+m[6] => xor2to1:c6b.input1
+m[6] => fcs[14].DATAIN
+m[7] => xor2to1:g8.input1
+m[7] => xor2to1:c7b.input1
+m[7] => fcs[15].DATAIN
+m[8] => xor2to1:g9.input0
+m[8] => xor2to1:c7c.input1
+m[8] => fcs[16].DATAIN
+m[9] => xor2to1:g9.input1
+m[9] => xor2to1:g10.input0
+m[9] => fcs[17].DATAIN
+m[10] => xor2to1:g5.input1
+m[10] => xor2to1:g6.input1
+m[10] => fcs[18].DATAIN
+m[11] => xor2to1:g11.input0
+m[11] => xor2to1:c7d.input1
+m[11] => fcs[19].DATAIN
+m[12] => xor2to1:g11.input1
+m[12] => xor2to1:c5b.input1
+m[12] => fcs[20].DATAIN
+m[13] => xor2to1:g4.input1
+m[13] => xor2to1:c1b.input1
+m[13] => fcs[21].DATAIN
+m[14] => xor2to1:g10.input1
+m[14] => fcs[22].DATAIN
+m[15] => xor2to1:g2.input1
+m[15] => fcs[23].DATAIN
+fcs[0] <= xor2to1:c0c.output
+fcs[1] <= xor2to1:c1b.output
+fcs[2] <= xor2to1:c2c.output
+fcs[3] <= xor2to1:c3b.output
+fcs[4] <= xor2to1:c4b.output
+fcs[5] <= xor2to1:c5b.output
+fcs[6] <= xor2to1:c6c.output
+fcs[7] <= xor2to1:c7d.output
+fcs[8] <= m[0].DB_MAX_OUTPUT_PORT_TYPE
+fcs[9] <= m[1].DB_MAX_OUTPUT_PORT_TYPE
+fcs[10] <= m[2].DB_MAX_OUTPUT_PORT_TYPE
+fcs[11] <= m[3].DB_MAX_OUTPUT_PORT_TYPE
+fcs[12] <= m[4].DB_MAX_OUTPUT_PORT_TYPE
+fcs[13] <= m[5].DB_MAX_OUTPUT_PORT_TYPE
+fcs[14] <= m[6].DB_MAX_OUTPUT_PORT_TYPE
+fcs[15] <= m[7].DB_MAX_OUTPUT_PORT_TYPE
+fcs[16] <= m[8].DB_MAX_OUTPUT_PORT_TYPE
+fcs[17] <= m[9].DB_MAX_OUTPUT_PORT_TYPE
+fcs[18] <= m[10].DB_MAX_OUTPUT_PORT_TYPE
+fcs[19] <= m[11].DB_MAX_OUTPUT_PORT_TYPE
+fcs[20] <= m[12].DB_MAX_OUTPUT_PORT_TYPE
+fcs[21] <= m[13].DB_MAX_OUTPUT_PORT_TYPE
+fcs[22] <= m[14].DB_MAX_OUTPUT_PORT_TYPE
+fcs[23] <= m[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g1
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g2
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g3
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g4
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g5
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g6
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g7
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g8
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g9
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g10
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g11
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g12
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g13
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g14
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g15
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:g16
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c7a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c7b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c7c
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c7d
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c6a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c6b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c6c
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c5a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c5b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c4a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c4b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c3a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c3b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c2a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c2b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c2c
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c1a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c1b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c0a
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c0b
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|CRC_Encoder:encoder|xor2to1:c0c
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error0
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error1
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error2
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error3
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error4
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error5
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error6
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_Checker|xor2to1:error7
+input0 => output.IN0
+input0 => output.IN0
+input1 => output.IN1
+input1 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
