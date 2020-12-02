@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRC_Checker
-Wed Dec 02 12:04:15 2020
+Wed Dec 02 14:19:36 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 02 12:04:15 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 02 14:19:36 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; CRC_Checker                                 ;
 ; Top-level Entity Name              ; CRC_Checker                                 ;
@@ -151,8 +151,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,15 +162,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
-; CRC_Encoder.vhd                  ; yes             ; User VHDL File  ; C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd ;         ;
-; Components.vhd                   ; yes             ; User VHDL File  ; C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd  ;         ;
-; CRC_Checker.vhd                  ; yes             ; User VHDL File  ; C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; CRC_Encoder.vhd                  ; yes             ; User VHDL File  ; C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd ;         ;
+; Components.vhd                   ; yes             ; User VHDL File  ; C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd  ;         ;
+; CRC_Checker.vhd                  ; yes             ; User VHDL File  ; C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -282,22 +282,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec 02 12:03:53 2020
+    Info: Processing started: Wed Dec 02 14:19:29 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRC_Checker -c CRC_Checker
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file crc_encoder.vhd
-    Info (12022): Found design unit 1: CRC_Encoder-Structural File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 13
-    Info (12023): Found entity 1: CRC_Encoder File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 7
+    Info (12022): Found design unit 1: CRC_Encoder-Structural File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 13
+    Info (12023): Found entity 1: CRC_Encoder File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components.vhd
-    Info (12022): Found design unit 1: xor2to1-logic_function File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd Line: 11
-    Info (12023): Found entity 1: xor2to1 File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd Line: 5
+    Info (12022): Found design unit 1: xor2to1-logic_function File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd Line: 11
+    Info (12023): Found entity 1: xor2to1 File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/Components.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file crc_checker.vhd
-    Info (12022): Found design unit 1: CRC_Checker-Structural File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 10
-    Info (12023): Found entity 1: CRC_Checker File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 5
+    Info (12022): Found design unit 1: CRC_Checker-Structural File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 11
+    Info (12023): Found entity 1: CRC_Checker File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 5
 Info (12127): Elaborating entity "CRC_Checker" for the top level hierarchy
-Info (12128): Elaborating entity "CRC_Encoder" for hierarchy "CRC_Encoder:encoder" File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 27
-Info (12128): Elaborating entity "xor2to1" for hierarchy "CRC_Encoder:encoder|xor2to1:g1" File: C:/Users/Guilherme Sousa/Desktop/ACA/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 30
+Info (12128): Elaborating entity "CRC_Encoder" for hierarchy "CRC_Encoder:encoder" File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Checker.vhd Line: 28
+Info (12128): Elaborating entity "xor2to1" for hierarchy "CRC_Encoder:encoder|xor2to1:g1" File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Checker/CRC_Encoder.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -306,9 +306,9 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 23 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Wed Dec 02 12:04:15 2020
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Wed Dec 02 14:19:37 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

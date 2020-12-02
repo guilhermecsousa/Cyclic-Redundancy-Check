@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon Nov 30 20:56:10 2020
+Analysis & Synthesis Status : Successful - Wed Dec 02 14:28:50 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : CRC_Encoder
 Top-level Entity Name : CRC_Encoder
@@ -7,7 +7,7 @@ Total logic elements : 16
     Total combinational functions : 16
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 48
+Total pins : 40
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

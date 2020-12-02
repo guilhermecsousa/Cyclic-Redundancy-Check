@@ -8,46 +8,46 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/simulation/qsim
+dC:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/simulation/qsim
 Ecrc_encoder
-Z1 w1606769853
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z7 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
-!i122 13
-R0
+Z0 w1606934366
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z6 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
+!i122 69
+Z7 dC:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim
 Z8 8CRC_Encoder.vho
 Z9 FCRC_Encoder.vho
 l0
-L35 1
-V?ljeScefcP2dEQ_63<Di12
-!s100 2zbNhDk6K<<@eeMV?ah9b0
+L78 1
+V:na0ogNz4ZJ[jlki2mz490
+!s100 ;d:l:UcW5T361`f1>h_1k0
 Z10 OV;C;2020.1;71
 32
-Z11 !s110 1606769854
+Z11 !s110 1606934367
 !i10b 1
-Z12 !s108 1606769854.000000
+Z12 !s108 1606934367.000000
 Z13 !s90 -work|work|CRC_Encoder.vho|
 Z14 !s107 CRC_Encoder.vho|
 !i113 1
 Z15 o-work work
 Z16 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
 R5
 R6
-R7
-DEx4 work 11 crc_encoder 0 22 ?ljeScefcP2dEQ_63<Di12
-!i122 13
-l121
-L43 914
-VRTRgO?S@_K47=bdR^Bn;V3
-!s100 [Tz6hP2JJLIV6iE1aGUko3
+DEx4 work 11 crc_encoder 0 22 :na0ogNz4ZJ[jlki2mz490
+!i122 69
+l204
+L128 868
+VZLU@_66bFOY]1YZ21gFZn2
+!s100 9iP:=WHbZj9k<gl@@GbOE2
 R10
 32
 R11
@@ -59,13 +59,13 @@ R14
 R15
 R16
 Ecrc_encoder_vhd_vec_tst
-Z17 w1606769852
+Z17 w1606934365
+R4
 R5
-R6
-!i122 14
-R0
-Z18 8test1.vwf.vht
-Z19 Ftest1.vwf.vht
+!i122 70
+R7
+Z18 8Encoder.vwf.vht
+Z19 FEncoder.vwf.vht
 l0
 L32 1
 V_1E7P;IFdlBX?Ej>i9R:D2
@@ -75,20 +75,20 @@ R10
 R11
 !i10b 1
 R12
-Z20 !s90 -work|work|test1.vwf.vht|
-Z21 !s107 test1.vwf.vht|
+Z20 !s90 -work|work|Encoder.vwf.vht|
+Z21 !s107 Encoder.vwf.vht|
 !i113 1
 R15
 R16
 Acrc_encoder_arch
+R4
 R5
-R6
 Z22 DEx4 work 23 crc_encoder_vhd_vec_tst 0 22 _1E7P;IFdlBX?Ej>i9R:D2
-!i122 14
-l47
-L34 182
-VcF=KW1X@A=]WPALUbiH960
-!s100 BSMPGLU@><G`_<0HIoW;Y1
+!i122 70
+l45
+Z23 L34 187
+Z24 V<d?f>L3[^g5H2KB=DQaSO2
+Z25 !s100 1:_j9k=35no4z14bCodm22
 R10
 32
 R11
@@ -96,6 +96,55 @@ R11
 R12
 R20
 R21
+!i113 1
+R15
+R16
+Ehard_block
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+!i122 69
+R7
+R8
+R9
+l0
+L35 1
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+!i122 69
+l65
+L51 20
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
 !i113 1
 R15
 R16

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRC_Encoder
-Mon Nov 30 20:56:11 2020
+Wed Dec 02 14:28:50 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 30 20:56:10 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 02 14:28:50 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; CRC_Encoder                                 ;
 ; Top-level Entity Name              ; CRC_Encoder                                 ;
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 16                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 48                                          ;
+; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -150,8 +150,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,14 +161,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; Components.vhd                   ; yes             ; User VHDL File  ; C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/Components.vhd  ;         ;
-; CRC_Encoder.vhd                  ; yes             ; User VHDL File  ; C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/CRC_Encoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; Components.vhd                   ; yes             ; User VHDL File  ; C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Components.vhd  ;         ;
+; CRC_Encoder.vhd                  ; yes             ; User VHDL File  ; C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/CRC_Encoder.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -192,14 +192,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0          ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 48         ;
+; I/O pins                                    ; 40         ;
 ;                                             ;            ;
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; m[3]~input ;
 ; Maximum fan-out                             ; 5          ;
-; Total fan-out                               ; 139        ;
-; Average fan-out                             ; 1.24       ;
+; Total fan-out                               ; 123        ;
+; Average fan-out                             ; 1.28       ;
 +---------------------------------------------+------------+
 
 
@@ -208,19 +208,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
-; |CRC_Encoder               ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |CRC_Encoder             ; CRC_Encoder ; work         ;
+; |CRC_Encoder               ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |CRC_Encoder             ; CRC_Encoder ; work         ;
+;    |xor2to1:c0c|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c0c ; xor2to1     ; work         ;
+;    |xor2to1:c1b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c1b ; xor2to1     ; work         ;
+;    |xor2to1:c2c|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c2c ; xor2to1     ; work         ;
+;    |xor2to1:c3b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c3b ; xor2to1     ; work         ;
+;    |xor2to1:c4b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c4b ; xor2to1     ; work         ;
+;    |xor2to1:c5b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c5b ; xor2to1     ; work         ;
+;    |xor2to1:c6c|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c6c ; xor2to1     ; work         ;
+;    |xor2to1:c7d|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:c7d ; xor2to1     ; work         ;
 ;    |xor2to1:g13|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:g13 ; xor2to1     ; work         ;
 ;    |xor2to1:g14|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:g14 ; xor2to1     ; work         ;
 ;    |xor2to1:g15|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:g15 ; xor2to1     ; work         ;
 ;    |xor2to1:g16|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:g16 ; xor2to1     ; work         ;
-;    |xor2to1:x0c|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x0c ; xor2to1     ; work         ;
-;    |xor2to1:x1b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x1b ; xor2to1     ; work         ;
-;    |xor2to1:x2c|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x2c ; xor2to1     ; work         ;
-;    |xor2to1:x3b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x3b ; xor2to1     ; work         ;
-;    |xor2to1:x4b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x4b ; xor2to1     ; work         ;
-;    |xor2to1:x5b|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x5b ; xor2to1     ; work         ;
-;    |xor2to1:x6c|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x6c ; xor2to1     ; work         ;
-;    |xor2to1:x7d|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CRC_Encoder|xor2to1:x7d ; xor2to1     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -245,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 48                          ;
+; boundary_port         ; 40                          ;
 ; cycloneiii_lcell_comb ; 16                          ;
 ;     normal            ; 16                          ;
 ;         3 data inputs ; 5                           ;
@@ -271,29 +271,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 30 20:55:57 2020
+    Info: Processing started: Wed Dec 02 14:28:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRC_Encoder -c CRC_Encoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file components.vhd
-    Info (12022): Found design unit 1: xor2to1-logic_function File: C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/Components.vhd Line: 11
-    Info (12023): Found entity 1: xor2to1 File: C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/Components.vhd Line: 5
+    Info (12022): Found design unit 1: xor2to1-logic_function File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Components.vhd Line: 11
+    Info (12023): Found entity 1: xor2to1 File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Components.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file crc_encoder.vhd
-    Info (12022): Found design unit 1: CRC_Encoder-Structural File: C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/CRC_Encoder.vhd Line: 14
-    Info (12023): Found entity 1: CRC_Encoder File: C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/CRC_Encoder.vhd Line: 7
+    Info (12022): Found design unit 1: CRC_Encoder-Structural File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/CRC_Encoder.vhd Line: 13
+    Info (12023): Found entity 1: CRC_Encoder File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/CRC_Encoder.vhd Line: 7
 Info (12127): Elaborating entity "CRC_Encoder" for the top level hierarchy
-Info (12128): Elaborating entity "xor2to1" for hierarchy "xor2to1:g1" File: C:/Users/Guilherme Sousa/Desktop/ACA/CRC/CRC_Encoder/CRC_Encoder.vhd Line: 31
+Info (12128): Elaborating entity "xor2to1" for hierarchy "xor2to1:g1" File: C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/CRC_Encoder.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 32 output pins
+    Info (21059): Implemented 24 output pins
     Info (21061): Implemented 16 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Mon Nov 30 20:56:11 2020
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Wed Dec 02 14:28:50 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

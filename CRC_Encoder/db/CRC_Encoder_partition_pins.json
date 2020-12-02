@@ -4,131 +4,99 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "crc[0]",
+					"name" : "fcs[0]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[1]",
+					"name" : "fcs[1]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[2]",
+					"name" : "fcs[2]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[3]",
+					"name" : "fcs[3]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[4]",
+					"name" : "fcs[4]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[5]",
+					"name" : "fcs[5]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[6]",
+					"name" : "fcs[6]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[7]",
+					"name" : "fcs[7]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[8]",
+					"name" : "fcs[8]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[9]",
+					"name" : "fcs[9]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[10]",
+					"name" : "fcs[10]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[11]",
+					"name" : "fcs[11]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[12]",
+					"name" : "fcs[12]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[13]",
+					"name" : "fcs[13]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[14]",
+					"name" : "fcs[14]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[15]",
+					"name" : "fcs[15]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[16]",
+					"name" : "fcs[16]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[17]",
+					"name" : "fcs[17]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[18]",
+					"name" : "fcs[18]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[19]",
+					"name" : "fcs[19]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[20]",
+					"name" : "fcs[20]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[21]",
+					"name" : "fcs[21]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[22]",
+					"name" : "fcs[22]",
 					"strict" : false
 				},
 				{
-					"name" : "crc[23]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[2]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[3]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[4]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[5]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[6]",
-					"strict" : false
-				},
-				{
-					"name" : "cc[7]",
+					"name" : "fcs[23]",
 					"strict" : false
 				},
 				{

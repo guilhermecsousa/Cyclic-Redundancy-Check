@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity CRC_Checker is
 	port(fcs 			: in  std_logic_vector(23 downto 0);
+		  --frem			: out std_logic_vector(7 downto 0); 	--testing purposes
 		  check_error  : out std_logic);
 end CRC_Checker;		
 
@@ -36,6 +37,7 @@ begin
 	error7 : xor2to1 port map(enc_out(7), fcs(7), err(7));
 	
 	check_error	<= err(0) or err(1) or err(2) or err(3) or err(4) or err(5) or err(6) or err(7);
+	--frem <= err(7 downto 0);		--testing purposes
 	
 end Structural;	
 	
