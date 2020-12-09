@@ -1,5 +1,5 @@
 Flow report for CRC_Encoder
-Wed Dec 02 18:39:26 2020
+Wed Dec 09 01:03:43 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 02 18:39:26 2020       ;
+; Flow Status                        ; Successful - Wed Dec 09 01:03:43 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; CRC_Encoder                                 ;
 ; Top-level Entity Name              ; CRC_Encoder                                 ;
@@ -115,7 +115,13 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4627 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:00                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:32                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4636 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4627 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -128,6 +134,12 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-OUSG6GB  ; Windows 10 ; 10.0       ; x86_64         ;
@@ -157,6 +169,12 @@ quartus_eda --read_settings_files=off --write_settings_files=off CRC_Encoder -c 
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Encoder.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Waveform.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Encoder.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Encoder.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Encoder.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC_Encoder -c CRC_Encoder --vector_source=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf --testbench_file=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/Encoder.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/simulation/qsim/ CRC_Encoder -c CRC_Encoder

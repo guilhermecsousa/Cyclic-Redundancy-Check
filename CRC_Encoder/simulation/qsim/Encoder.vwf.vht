@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/02/2020 20:13:33"
+-- Generated on "12/09/2020 01:03:41"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          CRC_Encoder
 -- 
@@ -53,19 +53,27 @@ BEGIN
 t_prcs_m_15: PROCESS
 BEGIN
 	m(15) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 120000 ps;
 	m(15) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
 	m(15) <= '0';
-	WAIT FOR 70000 ps;
+	WAIT FOR 240000 ps;
 	m(15) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
 	m(15) <= '0';
+	WAIT FOR 360000 ps;
+	m(15) <= '1';
 WAIT;
 END PROCESS t_prcs_m_15;
 -- m[14]
 t_prcs_m_14: PROCESS
 BEGIN
+	m(14) <= '1';
+	WAIT FOR 120000 ps;
+	m(14) <= '0';
+	WAIT FOR 240000 ps;
+	m(14) <= '1';
+	WAIT FOR 600000 ps;
 	m(14) <= '0';
 WAIT;
 END PROCESS t_prcs_m_14;
@@ -73,59 +81,65 @@ END PROCESS t_prcs_m_14;
 t_prcs_m_13: PROCESS
 BEGIN
 	m(13) <= '0';
-	WAIT FOR 580000 ps;
+	WAIT FOR 120000 ps;
 	m(13) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
+	m(13) <= '0';
+	WAIT FOR 120000 ps;
+	m(13) <= '1';
+	WAIT FOR 360000 ps;
 	m(13) <= '0';
 WAIT;
 END PROCESS t_prcs_m_13;
 -- m[12]
 t_prcs_m_12: PROCESS
 BEGIN
-	m(12) <= '0';
-	WAIT FOR 30000 ps;
 	m(12) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 360000 ps;
 	m(12) <= '0';
+	WAIT FOR 240000 ps;
+	m(12) <= '1';
 WAIT;
 END PROCESS t_prcs_m_12;
 -- m[11]
 t_prcs_m_11: PROCESS
 BEGIN
-	m(11) <= '0';
-	WAIT FOR 580000 ps;
 	m(11) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
+	m(11) <= '0';
+	WAIT FOR 120000 ps;
+	m(11) <= '1';
+	WAIT FOR 240000 ps;
 	m(11) <= '0';
 WAIT;
 END PROCESS t_prcs_m_11;
 -- m[10]
 t_prcs_m_10: PROCESS
 BEGIN
-	m(10) <= '0';
-	WAIT FOR 300000 ps;
 	m(10) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
 	m(10) <= '0';
-	WAIT FOR 80000 ps;
+	WAIT FOR 240000 ps;
 	m(10) <= '1';
-	WAIT FOR 200000 ps;
-	m(10) <= '0';
 WAIT;
 END PROCESS t_prcs_m_10;
 -- m[9]
 t_prcs_m_9: PROCESS
 BEGIN
 	m(9) <= '0';
-	WAIT FOR 580000 ps;
+	WAIT FOR 240000 ps;
 	m(9) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 360000 ps;
 	m(9) <= '0';
+	WAIT FOR 120000 ps;
+	m(9) <= '1';
 WAIT;
 END PROCESS t_prcs_m_9;
 -- m[8]
 t_prcs_m_8: PROCESS
 BEGIN
+	m(8) <= '1';
+	WAIT FOR 600000 ps;
 	m(8) <= '0';
 WAIT;
 END PROCESS t_prcs_m_8;
@@ -133,13 +147,13 @@ END PROCESS t_prcs_m_8;
 t_prcs_m_7: PROCESS
 BEGIN
 	m(7) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 240000 ps;
 	m(7) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
 	m(7) <= '0';
-	WAIT FOR 70000 ps;
+	WAIT FOR 120000 ps;
 	m(7) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
 	m(7) <= '0';
 WAIT;
 END PROCESS t_prcs_m_7;
@@ -147,13 +161,13 @@ END PROCESS t_prcs_m_7;
 t_prcs_m_6: PROCESS
 BEGIN
 	m(6) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 240000 ps;
 	m(6) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 360000 ps;
 	m(6) <= '0';
-	WAIT FOR 70000 ps;
+	WAIT FOR 120000 ps;
 	m(6) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
 	m(6) <= '0';
 WAIT;
 END PROCESS t_prcs_m_6;
@@ -161,19 +175,29 @@ END PROCESS t_prcs_m_6;
 t_prcs_m_5: PROCESS
 BEGIN
 	m(5) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 360000 ps;
 	m(5) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
 	m(5) <= '0';
+	WAIT FOR 360000 ps;
+	m(5) <= '1';
 WAIT;
 END PROCESS t_prcs_m_5;
 -- m[4]
 t_prcs_m_4: PROCESS
 BEGIN
 	m(4) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 120000 ps;
 	m(4) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
+	m(4) <= '0';
+	WAIT FOR 120000 ps;
+	m(4) <= '1';
+	WAIT FOR 240000 ps;
+	m(4) <= '0';
+	WAIT FOR 120000 ps;
+	m(4) <= '1';
+	WAIT FOR 120000 ps;
 	m(4) <= '0';
 WAIT;
 END PROCESS t_prcs_m_4;
@@ -181,40 +205,62 @@ END PROCESS t_prcs_m_4;
 t_prcs_m_3: PROCESS
 BEGIN
 	m(3) <= '0';
-	WAIT FOR 300000 ps;
+	WAIT FOR 240000 ps;
 	m(3) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
 	m(3) <= '0';
+	WAIT FOR 240000 ps;
+	m(3) <= '1';
+	WAIT FOR 120000 ps;
+	m(3) <= '0';
+	WAIT FOR 120000 ps;
+	m(3) <= '1';
 WAIT;
 END PROCESS t_prcs_m_3;
 -- m[2]
 t_prcs_m_2: PROCESS
 BEGIN
 	m(2) <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 240000 ps;
 	m(2) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
+	m(2) <= '0';
+	WAIT FOR 120000 ps;
+	m(2) <= '1';
+	WAIT FOR 120000 ps;
+	m(2) <= '0';
+	WAIT FOR 120000 ps;
+	m(2) <= '1';
+	WAIT FOR 120000 ps;
 	m(2) <= '0';
 WAIT;
 END PROCESS t_prcs_m_2;
 -- m[1]
 t_prcs_m_1: PROCESS
 BEGIN
-	m(1) <= '0';
-	WAIT FOR 30000 ps;
 	m(1) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 120000 ps;
 	m(1) <= '0';
+	WAIT FOR 240000 ps;
+	m(1) <= '1';
+	WAIT FOR 120000 ps;
+	m(1) <= '0';
+	WAIT FOR 240000 ps;
+	m(1) <= '1';
 WAIT;
 END PROCESS t_prcs_m_1;
 -- m[0]
 t_prcs_m_0: PROCESS
 BEGIN
-	m(0) <= '0';
-	WAIT FOR 580000 ps;
 	m(0) <= '1';
-	WAIT FOR 200000 ps;
+	WAIT FOR 240000 ps;
 	m(0) <= '0';
+	WAIT FOR 240000 ps;
+	m(0) <= '1';
+	WAIT FOR 240000 ps;
+	m(0) <= '0';
+	WAIT FOR 120000 ps;
+	m(0) <= '1';
 WAIT;
 END PROCESS t_prcs_m_0;
 END CRC_Encoder_arch;

@@ -1,12 +1,12 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Bruno/Desktop/0Cyclic-Redundancy-Check-main/CRC_Encoder/Components.vhd
-source_file = 1, C:/Users/Bruno/Desktop/0Cyclic-Redundancy-Check-main/CRC_Encoder/CRC_Encoder.vhd
-source_file = 1, C:/Users/Bruno/Desktop/0Cyclic-Redundancy-Check-main/CRC_Encoder/Encoder.vwf
+source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Components.vhd
+source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/CRC_Encoder.vhd
+source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/Encoder.vwf
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/Bruno/Desktop/0Cyclic-Redundancy-Check-main/CRC_Encoder/db/CRC_Encoder.cbx.xml
+source_file = 1, C:/Users/Bruno/Desktop/Cyclic-Redundancy-Check/CRC_Encoder/db/CRC_Encoder.cbx.xml
 design_name = hard_block
 design_name = CRC_Encoder
 instance = comp, \fcs[0]~output\, fcs[0]~output, CRC_Encoder, 1
