@@ -1,0 +1,57 @@
+Simulation -> Simulation Settings
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Mudar WaveForm para flipFlopD
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off flipFlopD -c flipFlopD --vector_source="C:/Users/Bruno/ACA/VHDL/aula01/flipFlopD/Waveform.vwf" --testbench_file="C:/Users/Bruno/ACA/VHDL/aula01/flipFlopD/simulation/qsim/Waveform.vwf.vht"
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off flipFlopD -c flipFlopD --vector_source="C:/Users/Bruno/ACA/VHDL/aula01/flipFlopD/flipFlopD.vwf" --testbench_file="C:/Users/Bruno/ACA/VHDL/aula01/flipFlopD/simulation/qsim/flipFlopD.vwf.vht"
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//4º linha - Mudar Waveform para flipFlopD
+//5º linha - Apagar o -novopt
+
+onerror {exit -code 1}
+vlib work
+vcom -work work flipFlopD.vho
+vcom -work work Waveform.vwf.vht
+vsim -novopt -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.flipFlopD_vhd_vec_tst
+vcd file -direction flipFlopD.msim.vcd
+vcd add -internal flipFlopD_vhd_vec_tst/*
+vcd add -internal flipFlopD_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+
+
+
+
+onerror {exit -code 1}
+vlib work
+vcom -work work flipFlopD.vho
+vcom -work work flipFlopD.vwf.vht
+vsim -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.flipFlopD_vhd_vec_tst
+vcd file -direction flipFlopD.msim.vcd
+vcd add -internal flipFlopD_vhd_vec_tst/*
+vcd add -internal flipFlopD_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+
